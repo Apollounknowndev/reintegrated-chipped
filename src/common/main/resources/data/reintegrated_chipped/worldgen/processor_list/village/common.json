@@ -1,0 +1,29 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:ladder"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:bookshelf"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.5
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:bookshelf"
+        },
+        "random_mode": "per_block"
+      }
+    }
+  ]
+}

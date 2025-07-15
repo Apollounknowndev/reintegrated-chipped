@@ -1,0 +1,26 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:smooth_sandstone"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.2
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "chipped:trodden_sandstone"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "#frost_top"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "down": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "down", "tintindex": 1},
+        "up": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "up", "tintindex": 1},
+        "north": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "north", "tintindex": 1},
+        "south": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "south", "tintindex": 1},
+        "east": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "east", "tintindex": 1},
+        "west": {"texture": "#leaves", "uv": [0, 0, 16, 16], "cullface": "west", "tintindex": 1}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "up": {"texture": "#frost_top", "uv": [0, 0, 16, 16], "cullface": "up", "tintindex": 0},
+        "north": {"texture": "#frost_side", "uv": [0, 0, 16, 16], "cullface": "north", "tintindex": 0},
+        "south": {"texture": "#frost_side", "uv": [0, 0, 16, 16], "cullface": "south", "tintindex": 0},
+        "east": {"texture": "#frost_side", "uv": [0, 0, 16, 16], "cullface": "east", "tintindex": 0},
+        "west": {"texture": "#frost_side", "uv": [0, 0, 16, 16], "cullface": "west", "tintindex": 0}
+      }
+    }
+  ]
+}

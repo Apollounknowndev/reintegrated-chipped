@@ -1,0 +1,8 @@
+{
+  "type": "lithostitched:stack_feature",
+  "base_features": [
+    "minecraft:warped_fungus",
+    "minecraft:warped_fungus_planted"
+  ],
+  "stacked_feature": "reintegrated_chipped:nether/warped_vines"
+}

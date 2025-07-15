@@ -1,0 +1,56 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:capped",
+      "limit": 1,
+      "delegate": {
+        "processor_type": "lithostitched:condition",
+        "if_true": {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:oak_leaves"
+        },
+        "then": {
+          "processor_type": "lithostitched:set_block",
+          "state_provider": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "chipped:golden_apple_oak_leaves",
+              "Properties": {
+                "distance": "2",
+                "persistent": "false"
+              }
+            }
+          },
+          "preserve_state": false
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:oak_leaves"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.1
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "chipped:apple_oak_leaves",
+            "Properties": {
+              "distance": "2",
+              "persistent": "false"
+            }
+          }
+        },
+        "preserve_state": false
+      }
+    }
+  ]
+}

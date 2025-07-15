@@ -1,0 +1,111 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:village/common"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:acacia_door"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:acacia_door",
+            "chipped:screen_acacia_door",
+            "chipped:tiled_acacia_door",
+            "chipped:paneled_acacia_door"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": [
+            "minecraft:stripped_acacia_log",
+            "minecraft:acacia_planks",
+            "minecraft:acacia_wood"
+          ]
+        },
+        {
+          "type": "lithostitched:position",
+          "anchor": "piece",
+          "predicate": {
+            "predicate_type": "minecraft:axis_aligned_linear_pos",
+            "axis": "y",
+            "min_dist": 0,
+            "max_dist": 1,
+            "min_chance": 1,
+            "max_chance": 0
+          }
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "chipped:acacia_planks_mosaic",
+            "chipped:diagonal_acacia_planks",
+            "chipped:fine_acacia_planks",
+            "chipped:vertical_acacia_planks"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:white_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:white_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:orange_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:orange_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:red_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:red_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    }
+  ]
+}

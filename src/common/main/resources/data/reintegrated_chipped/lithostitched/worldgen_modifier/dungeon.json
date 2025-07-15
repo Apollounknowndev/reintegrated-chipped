@@ -1,0 +1,5 @@
+{
+  "type": "lithostitched:stack_feature",
+  "base_features": "#reintegrated_chipped:dungeons",
+  "stacked_feature": "reintegrated_chipped:dungeon_cobwebs"
+}

@@ -1,0 +1,31 @@
+{
+  "type": "lithostitched:add_processor_list_processors",
+  "processor_lists": [
+    "minecraft:zombie_desert",
+    "minecraft:zombie_plains",
+    "minecraft:zombie_savanna",
+    "minecraft:zombie_snowy",
+    "minecraft:zombie_taiga"
+  ],
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:cobweb"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:cobweb",
+            "chipped:broken_cobweb",
+            "chipped:stringy_cobweb",
+            "chipped:scattered_cobweb"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "reintegrated_chipped:block/leaves",
+  "textures": {
+    "leaves": "minecraft:block/acacia_leaves",
+    "overlay": "reintegrated_chipped:block/overlay/golden_apple"
+  }
+}

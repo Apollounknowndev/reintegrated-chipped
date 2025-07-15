@@ -1,0 +1,11 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": [
+    "minecraft:village/desert/town_centers",
+    "minecraft:village/desert/houses",
+    "minecraft:village/desert/decor",
+    "minecraft:village/desert/zombie/houses",
+    "minecraft:village/desert/zombie/decor"
+  ],
+  "processor_list": "reintegrated_chipped:village/desert/all"
+}

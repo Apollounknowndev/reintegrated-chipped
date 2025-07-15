@@ -1,0 +1,11 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": [
+    "minecraft:village/plains/town_centers",
+    "minecraft:village/plains/houses",
+    "minecraft:village/plains/decor",
+    "minecraft:village/plains/zombie/houses",
+    "minecraft:village/plains/zombie/decor"
+  ],
+  "processor_list": "reintegrated_chipped:village/plains/all"
+}

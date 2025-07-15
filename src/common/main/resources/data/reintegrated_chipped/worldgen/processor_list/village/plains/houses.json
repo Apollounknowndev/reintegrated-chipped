@@ -1,0 +1,178 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:village/common"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:oak_door"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:oak_door",
+            "chipped:beach_oak_door",
+            "chipped:heavy_oak_door",
+            "chipped:tiled_oak_door"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:stripped_oak_log"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.333
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 4,
+              "data": {
+                "Name": "chipped:lumpy_stripped_oak_log"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:knotted_stripped_oak_log"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "mode": "per_piece",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": [
+          "minecraft:glass_pane",
+          "minecraft:yellow_stained_glass_pane",
+          "minecraft:white_stained_glass_pane"
+        ]
+      },
+      "then": {
+        "processor_type": "lithostitched:apply_random",
+        "mode": "per_piece",
+        "processor_lists": [
+          {
+            "weight": 3,
+            "data": {
+              "processors": []
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "processors": [
+                {
+                  "processor_type": "lithostitched:block_swap",
+                  "blocks": {
+                    "minecraft:glass_pane": "chipped:clear_leaded_glass_pane",
+                    "minecraft:yellow_stained_glass_pane": "chipped:tiled_yellow_stained_glass_pane",
+                    "minecraft:white_stained_glass_pane": "chipped:tiled_white_stained_glass_pane"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "weight": 1,
+            "data": {
+              "processors": [
+                {
+                  "processor_type": "lithostitched:block_swap",
+                  "blocks": {
+                    "minecraft:glass_pane": "chipped:oak_bordered_glass_pane",
+                    "minecraft:yellow_stained_glass_pane": "chipped:vertical_stiped_yellow_stained_glass_pane",
+                    "minecraft:white_stained_glass_pane": "chipped:vertical_stiped_white_stained_glass_pane"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:position",
+        "anchor": "piece",
+        "predicate": {
+          "predicate_type": "minecraft:axis_aligned_linear_pos",
+          "axis": "y",
+          "min_dist": 0,
+          "max_dist": 1,
+          "min_chance": 1,
+          "max_chance": 0
+        }
+      },
+      "then": [
+        {
+          "processor_type": "lithostitched:condition",
+          "if_true": {
+            "type": "lithostitched:matching_blocks",
+            "blocks": "minecraft:cobblestone"
+          },
+          "then": {
+            "processor_type": "lithostitched:set_block",
+            "state_provider": {
+              "type": "lithostitched:random_block",
+              "blocks": [
+                "minecraft:cobblestone",
+                "chipped:small_cobblestone_bricks",
+                "chipped:offset_cobblestone_bricks",
+                "chipped:layed_cobblestone_bricks",
+                "chipped:cobblestone_bricks",
+                "chipped:brick_bordered_cobblestone",
+                "chipped:polished_cobblestone"
+              ]
+            },
+            "random_mode": "per_piece"
+          }
+        },
+        {
+          "processor_type": "lithostitched:condition",
+          "if_true": {
+            "type": "lithostitched:matching_blocks",
+            "blocks": "minecraft:mossy_cobblestone"
+          },
+          "then": {
+            "processor_type": "lithostitched:set_block",
+            "state_provider": {
+              "type": "lithostitched:random_block",
+              "blocks": [
+                "minecraft:mossy_cobblestone",
+                "chipped:small_mossy_cobblestone_bricks",
+                "chipped:offset_mossy_cobblestone_bricks",
+                "chipped:layed_mossy_cobblestone_bricks",
+                "chipped:mossy_cobblestone_bricks",
+                "chipped:brick_bordered_mossy_cobblestone",
+                "chipped:polished_cobblestone"
+              ]
+            },
+            "random_mode": "per_piece"
+          }
+        }
+      ]
+    }
+  ]
+}

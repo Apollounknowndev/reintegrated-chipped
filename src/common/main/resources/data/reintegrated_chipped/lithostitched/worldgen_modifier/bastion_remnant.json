@@ -1,0 +1,23 @@
+{
+  "type": "lithostitched:add_processor_list_processors",
+  "processor_lists": [
+    "minecraft:bastion_generic_degradation",
+    "minecraft:bottom_rampart",
+    "minecraft:bridge",
+    "minecraft:entrance_replacement",
+    "minecraft:high_rampart",
+    "minecraft:high_wall",
+    "minecraft:housing",
+    "minecraft:rampart_degradation",
+    "minecraft:roof",
+    "minecraft:side_wall_degradation",
+    "minecraft:stable_degradation",
+    "minecraft:treasure_rooms"
+  ],
+  "processors": [
+    {
+      "processor_lists": "reintegrated_chipped:bastion_remnant",
+      "processor_type": "lithostitched:reference"
+    }
+  ]
+}

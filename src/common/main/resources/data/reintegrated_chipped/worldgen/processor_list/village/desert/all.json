@@ -1,0 +1,11 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:block_swap",
+      "blocks": {
+        "minecraft:torch": "chipped:jungle_torch",
+        "minecraft:wall_torch": "chipped:jungle_wall_torch"
+      }
+    }
+  ]
+}

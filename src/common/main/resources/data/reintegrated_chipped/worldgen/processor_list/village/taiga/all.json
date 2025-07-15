@@ -1,0 +1,33 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:spruce_planks"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.3
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "chipped:smooth_spruce_planks"
+          }
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:block_swap",
+      "blocks": {
+        "minecraft:torch": "chipped:spruce_torch",
+        "minecraft:wall_torch": "chipped:spruce_wall_torch"
+      }
+    }
+  ]
+}

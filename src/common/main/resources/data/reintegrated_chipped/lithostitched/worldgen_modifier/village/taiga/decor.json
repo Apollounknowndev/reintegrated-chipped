@@ -1,0 +1,14 @@
+{
+  "type": "lithostitched:add_template_pool_elements",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:feature_pool_element",
+        "feature": "reintegrated_chipped:village/spruce_boxes",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "template_pools": "minecraft:village/taiga/decor"
+}

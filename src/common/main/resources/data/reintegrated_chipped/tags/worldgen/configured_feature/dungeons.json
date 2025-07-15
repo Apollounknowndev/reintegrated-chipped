@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:monster_room",
+    {
+      "id": "reintegrated_arts_and_crafts:dungeon_gypsum",
+      "required": false
+    }
+  ]
+}

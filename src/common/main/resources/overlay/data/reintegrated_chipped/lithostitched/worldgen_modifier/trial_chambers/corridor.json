@@ -1,0 +1,31 @@
+{
+  "type": "lithostitched:add_processor_list_processors",
+  "processor_lists": "minecraft:trial_chambers_copper_bulb_degradation",
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:ladder"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:light_gray_stained_glass"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "random_mode": "per_piece",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:light_gray_stained_glass",
+            "chipped:tiled_light_gray_stained_glass",
+            "chipped:tiled_gray_stained_glass",
+            "chipped:fancy_light_gray_stained_glass",
+            "chipped:fancy_gray_stained_glass"
+          ]
+        }
+      }
+    }
+  ]
+}

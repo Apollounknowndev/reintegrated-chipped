@@ -1,0 +1,99 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:blackstone"
+        },
+        {
+          "type": "lithostitched:position",
+          "predicate": {
+            "predicate_type": "minecraft:axis_aligned_linear_pos",
+            "axis": "y",
+            "min_dist": 0,
+            "max_dist": 30,
+            "min_chance": 0,
+            "max_chance": 0.75
+          }
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "chipped:trodden_blackstone"
+          }
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:polished_blackstone_bricks"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 3,
+              "data": {
+                "Name": "minecraft:polished_blackstone_bricks"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:small_blackstone_bricks"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:layed_blackstone_bricks"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:gold_block"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:gold_block"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:reinforced_gold_block"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:plated_gold_block"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

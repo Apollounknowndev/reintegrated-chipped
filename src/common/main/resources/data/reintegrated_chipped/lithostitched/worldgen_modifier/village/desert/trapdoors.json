@@ -1,0 +1,9 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": [
+    "minecraft:village/desert/houses",
+    "minecraft:village/desert/zombie/houses"
+  ],
+  "locations": "minecraft:village/desert/houses/desert_farm_2",
+  "processor_list": "reintegrated_chipped:village/desert/trapdoors"
+}

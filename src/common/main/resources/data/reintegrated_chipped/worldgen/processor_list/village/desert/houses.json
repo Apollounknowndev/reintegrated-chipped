@@ -1,0 +1,89 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:village/common"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:smooth_sandstone"
+        },
+        {
+          "type": "lithostitched:position",
+          "anchor": "piece",
+          "predicate": {
+            "predicate_type": "minecraft:axis_aligned_linear_pos",
+            "axis": "y",
+            "min_dist": 0,
+            "max_dist": 1,
+            "min_chance": 1,
+            "max_chance": 0
+          }
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:smooth_sandstone",
+            "chipped:checkered_sandstone_tiles",
+            "chipped:sandstone_bricks",
+            "chipped:layed_sandstone_bricks",
+            "chipped:small_sandstone_bricks",
+            "chipped:tiny_sandstone_bricks"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:white_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:white_carpet"
+        },
+        "random_mode": "per_block"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:lime_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:lime_carpet"
+        },
+        "random_mode": "per_block"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:green_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:green_carpet"
+        },
+        "random_mode": "per_block"
+      }
+    }
+  ]
+}

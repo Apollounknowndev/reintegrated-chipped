@@ -1,0 +1,43 @@
+{
+  "type": "lithostitched:add_processor_list_processors",
+  "processor_lists": [
+    "lithostitched:shipwreck_palette/oak_and_birch",
+    "lithostitched:shipwreck_palette/oak_and_spruce",
+    "lithostitched:shipwreck_palette/spruce_and_oak"
+  ],
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:oak_planks"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.6
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 3,
+              "data": {
+                "Name": "chipped:smooth_oak_planks"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:brick_bond_oak_planks"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

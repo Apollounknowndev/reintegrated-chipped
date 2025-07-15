@@ -1,0 +1,11 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": [
+    "minecraft:village/snowy/town_centers",
+    "minecraft:village/snowy/houses",
+    "minecraft:village/snowy/decor",
+    "minecraft:village/snowy/zombie/houses",
+    "minecraft:village/snowy/zombie/decor"
+  ],
+  "processor_list": "reintegrated_chipped:village/snowy/all"
+}

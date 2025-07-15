@@ -1,0 +1,11 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:block_swap",
+      "blocks": {
+        "minecraft:torch": "chipped:acacia_torch",
+        "minecraft:wall_torch": "chipped:acacia_wall_torch"
+      }
+    }
+  ]
+}

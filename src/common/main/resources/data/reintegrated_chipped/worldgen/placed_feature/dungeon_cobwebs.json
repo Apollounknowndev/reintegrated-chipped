@@ -1,0 +1,38 @@
+{
+  "feature": "reintegrated_chipped:dungeon_cobwebs",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 4,
+          "max_inclusive": 10
+        }
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": -2,
+          "max_inclusive": 2
+        }
+      },
+      "y_spread": 3
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:has_sturdy_face",
+        "offset": [
+          0,
+          1,
+          0
+        ],
+        "direction": "down"
+      }
+    }
+  ]
+}

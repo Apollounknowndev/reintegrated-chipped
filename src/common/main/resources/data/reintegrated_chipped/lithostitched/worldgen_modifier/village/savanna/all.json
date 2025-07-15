@@ -1,0 +1,11 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": [
+    "minecraft:village/savanna/town_centers",
+    "minecraft:village/savanna/houses",
+    "minecraft:village/savanna/decor",
+    "minecraft:village/savanna/zombie/houses",
+    "minecraft:village/savanna/zombie/decor"
+  ],
+  "processor_list": "reintegrated_chipped:village/savanna/all"
+}

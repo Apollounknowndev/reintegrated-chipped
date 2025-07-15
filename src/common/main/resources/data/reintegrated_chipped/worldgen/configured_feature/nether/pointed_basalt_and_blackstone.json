@@ -1,0 +1,86 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "lithostitched:select",
+        "config": {
+          "features": [
+            {
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:basalt"
+              },
+              "feature": {
+                "feature": "reintegrated_chipped:nether/pointed/basalt_up",
+                "placement": []
+              }
+            },
+            {
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:basalt"
+              },
+              "feature": {
+                "feature": "reintegrated_chipped:nether/pointed/basalt_down",
+                "placement": []
+              }
+            },
+            {
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  -1,
+                  0
+                ],
+                "blocks": "minecraft:blackstone"
+              },
+              "feature": {
+                "feature": "reintegrated_chipped:nether/pointed/blackstone_up",
+                "placement": []
+              }
+            },
+            {
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:blackstone"
+              },
+              "feature": {
+                "feature": "reintegrated_chipped:nether/pointed/blackstone_down",
+                "placement": []
+              }
+            }
+          ]
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    },
+    "tries": 24,
+    "xz_spread": 4,
+    "y_spread": 2
+  }
+}

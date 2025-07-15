@@ -1,0 +1,6 @@
+{
+  "type": "lithostitched:add_features",
+  "biomes": "minecraft:basalt_deltas",
+  "features": "reintegrated_chipped:nether/pointed_basalt_and_blackstone",
+  "step": "underground_decoration"
+}

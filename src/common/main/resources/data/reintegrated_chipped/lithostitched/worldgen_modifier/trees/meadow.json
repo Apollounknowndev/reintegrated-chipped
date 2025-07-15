@@ -1,0 +1,6 @@
+{
+  "type": "lithostitched:add_features",
+  "biomes": "minecraft:meadow",
+  "features": "reintegrated_chipped:trees/meadow",
+  "step": "vegetal_decoration"
+}

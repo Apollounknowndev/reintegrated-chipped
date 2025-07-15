@@ -1,0 +1,6 @@
+{
+  "type": "lithostitched:set_pool_element_processors",
+  "template_pools": "minecraft:trial_chambers/entrance",
+  "locations": "minecraft:trial_chambers/corridor/addon/display_1",
+  "processor_list": "reintegrated_chipped:trial_chambers/oak_tree"
+}

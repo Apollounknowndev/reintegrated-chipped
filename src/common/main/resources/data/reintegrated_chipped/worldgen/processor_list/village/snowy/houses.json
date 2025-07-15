@@ -1,0 +1,94 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:village/common"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:spruce_door"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:spruce_door",
+            "chipped:dual_paneled_spruce_door",
+            "chipped:fortified_spruce_door",
+            "chipped:gated_spruce_door",
+            "chipped:heavy_spruce_door",
+            "chipped:tiled_spruce_door",
+            "chipped:pressed_spruce_door"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": [
+        {
+          "type": "lithostitched:matching_blocks",
+          "blocks": "minecraft:stripped_spruce_log"
+        },
+        {
+          "type": "lithostitched:random_chance",
+          "chance": 0.2
+        }
+      ],
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 4,
+              "data": {
+                "Name": "chipped:lumpy_stripped_spruce_log"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "chipped:knotted_stripped_spruce_log"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:blue_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:blue_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:red_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:red_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    }
+  ]
+}

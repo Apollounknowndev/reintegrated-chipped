@@ -1,0 +1,139 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:reference",
+      "processor_lists": "reintegrated_chipped:village/common"
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:spruce_door"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:spruce_door",
+            "chipped:dual_paneled_spruce_door",
+            "chipped:fortified_spruce_door",
+            "chipped:gated_spruce_door",
+            "chipped:heavy_spruce_door",
+            "chipped:tiled_spruce_door",
+            "chipped:pressed_spruce_door"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:position",
+        "anchor": "piece",
+        "predicate": {
+          "predicate_type": "minecraft:axis_aligned_linear_pos",
+          "axis": "y",
+          "min_dist": 0,
+          "max_dist": 1,
+          "min_chance": 1,
+          "max_chance": 0
+        }
+      },
+      "then": [
+        {
+          "processor_type": "lithostitched:condition",
+          "if_true": {
+            "type": "lithostitched:matching_blocks",
+            "blocks": "minecraft:cobblestone"
+          },
+          "then": {
+            "processor_type": "lithostitched:set_block",
+            "state_provider": {
+              "type": "lithostitched:random_block",
+              "blocks": [
+                "minecraft:cobblestone",
+                "chipped:small_cobblestone_bricks",
+                "chipped:offset_cobblestone_bricks",
+                "chipped:layed_cobblestone_bricks",
+                "chipped:cobblestone_bricks",
+                "chipped:brick_bordered_cobblestone",
+                "chipped:polished_cobblestone"
+              ]
+            },
+            "random_mode": "per_piece"
+          }
+        },
+        {
+          "processor_type": "lithostitched:condition",
+          "if_true": {
+            "type": "lithostitched:matching_blocks",
+            "blocks": "minecraft:mossy_cobblestone"
+          },
+          "then": {
+            "processor_type": "lithostitched:set_block",
+            "state_provider": {
+              "type": "lithostitched:random_block",
+              "blocks": [
+                "minecraft:mossy_cobblestone",
+                "chipped:small_mossy_cobblestone_bricks",
+                "chipped:offset_mossy_cobblestone_bricks",
+                "chipped:layed_mossy_cobblestone_bricks",
+                "chipped:mossy_cobblestone_bricks",
+                "chipped:brick_bordered_mossy_cobblestone",
+                "chipped:polished_cobblestone"
+              ]
+            },
+            "random_mode": "per_piece"
+          }
+        }
+      ]
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:white_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:white_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:purple_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:purple_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    },
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:red_carpet"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": "#chipped:red_carpet"
+        },
+        "random_mode": "per_piece"
+      }
+    }
+  ]
+}

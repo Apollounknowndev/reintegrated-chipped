@@ -1,0 +1,44 @@
+{
+  "feature": "reintegrated_chipped:nether/crimson_vines",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 12
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": -2,
+            "weight": 1
+          },
+          {
+            "data": -1,
+            "weight": 3
+          },
+          {
+            "data": 0,
+            "weight": 4
+          },
+          {
+            "data": 1,
+            "weight": 3
+          },
+          {
+            "data": 2,
+            "weight": 1
+          }
+        ]
+      },
+      "y_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 0,
+          "max_inclusive": 16
+        }
+      }
+    }
+  ]
+}

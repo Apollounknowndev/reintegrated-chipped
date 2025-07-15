@@ -1,0 +1,8 @@
+{
+  "parent": "reintegrated_chipped:block/frosted_leaves",
+  "textures": {
+    "leaves": "minecraft:block/spruce_leaves",
+    "frost_side": "reintegrated_chipped:block/overlay/frosted_spruce",
+    "frost_top": "chipped:block/spruce_leaves/frosted_spruce_leaves_top"
+  }
+}

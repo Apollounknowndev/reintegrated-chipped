@@ -1,0 +1,15 @@
+{
+  "type": "lithostitched:vines",
+  "config": {
+    "can_place_on": [
+      "minecraft:crimson_stem",
+      "minecraft:nether_wart_block"
+    ],
+    "max_length": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 4,
+      "min_inclusive": 2
+    },
+    "block": "chipped:nether_vine"
+  }
+}

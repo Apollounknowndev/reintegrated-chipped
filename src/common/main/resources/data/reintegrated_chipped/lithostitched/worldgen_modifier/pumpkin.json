@@ -1,0 +1,8 @@
+{
+  "type": "lithostitched:stack_feature",
+  "base_features": [
+    "minecraft:patch_pumpkin",
+    "minecraft:pile_pumpkin"
+  ],
+  "stacked_feature": "reintegrated_chipped:overgrown_pumpkins"
+}

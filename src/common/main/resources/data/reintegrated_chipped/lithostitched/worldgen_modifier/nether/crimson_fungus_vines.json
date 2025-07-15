@@ -1,0 +1,8 @@
+{
+  "type": "lithostitched:stack_feature",
+  "base_features": [
+    "minecraft:crimson_fungus",
+    "minecraft:crimson_fungus_planted"
+  ],
+  "stacked_feature": "reintegrated_chipped:nether/crimson_vines"
+}

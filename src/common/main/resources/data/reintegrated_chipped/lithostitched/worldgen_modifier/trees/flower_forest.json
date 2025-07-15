@@ -1,0 +1,6 @@
+{
+  "type": "lithostitched:add_features",
+  "biomes": "minecraft:flower_forest",
+  "features": "reintegrated_chipped:trees/flower_forest",
+  "step": "vegetal_decoration"
+}

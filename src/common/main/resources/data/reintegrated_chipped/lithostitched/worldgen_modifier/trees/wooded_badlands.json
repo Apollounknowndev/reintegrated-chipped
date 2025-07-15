@@ -1,0 +1,6 @@
+{
+  "type": "lithostitched:add_features",
+  "biomes": "minecraft:wooded_badlands",
+  "features": "reintegrated_chipped:trees/wooded_badlands",
+  "step": "vegetal_decoration"
+}

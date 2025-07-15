@@ -1,0 +1,8 @@
+{
+  "parent": "reintegrated_chipped:block/frosted_leaves",
+  "textures": {
+    "leaves": "minecraft:block/jungle_leaves",
+    "frost_side": "reintegrated_chipped:block/overlay/frosted_jungle",
+    "frost_top": "chipped:block/jungle_leaves/frosted_jungle_leaves_top"
+  }
+}

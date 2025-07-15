@@ -1,0 +1,27 @@
+{
+  "processors": [
+    {
+      "processor_type": "lithostitched:condition",
+      "if_true": {
+        "type": "lithostitched:matching_blocks",
+        "blocks": "minecraft:jungle_trapdoor"
+      },
+      "then": {
+        "processor_type": "lithostitched:set_block",
+        "state_provider": {
+          "type": "lithostitched:random_block",
+          "blocks": [
+            "minecraft:jungle_trapdoor",
+            "chipped:solid_jungle_trapdoor",
+            "chipped:slotted_jungle_trapdoor",
+            "chipped:barred_jungle_trapdoor",
+            "chipped:checkered_jungle_trapdoor",
+            "chipped:meshed_jungle_trapdoor",
+            "chipped:heavy_jungle_trapdoor"
+          ]
+        },
+        "random_mode": "per_piece"
+      }
+    }
+  ]
+}
