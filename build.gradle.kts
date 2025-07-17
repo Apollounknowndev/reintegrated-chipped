@@ -1,7 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.0"
     id("earth.terrarium.cloche") version "0.11.6"
-    id ("me.modmuss50.mod-publish-plugin") version "0.8.4"
 }
 
 repositories {
@@ -37,19 +36,25 @@ cloche {
         author("Apollo")
     }
 
-    common {
+    val shared120 = common("shared:1.20") {
         dependencies {
-            compileOnly("org.spongepowered:mixin:0.8.3")
-            compileOnly("earth.terrarium.chipped:chipped-forge-1.20.1:3.0.7")
-            compileOnly("earth.terrarium.athena:athena-forge-1.20.1:3.1.1")
-            compileOnly("com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1:2.1.29")
+            compileOnly("earth.terrarium.chipped:chipped-common-1.20.1:3.0.7")
+            compileOnly("earth.terrarium.athena:athena-common-1.20.1:3.1.1")
+            compileOnly("com.teamresourceful.resourcefullib:resourcefullib-common-1.20.1:2.1.29")
+        }
+    }
+    val shared121 = common("shared:1.21") {
+        dependencies {
+            compileOnly("earth.terrarium.chipped:chipped-common-1.21.1:4.0.2")
+            compileOnly("earth.terrarium.athena:athena-common-1.21:4.0.1")
+            compileOnly("com.teamresourceful.resourcefullib:resourcefullib-common-1.21:3.0.12")
         }
     }
 
     fabric("fabric:1.20.1") {
+        dependsOn(shared120)
         loaderVersion = "0.16.13"
         minecraftVersion = "1.20.1"
-        //mixins.from(file("src/common/main/reintegrated_chipped.mixins.json"))
 
         dependencies {
             fabricApi("0.92.6")
@@ -78,9 +83,9 @@ cloche {
     }
 
     fabric("fabric:1.21.1") {
+        dependsOn(shared121)
         loaderVersion = "0.16.13"
         minecraftVersion = "1.21.1"
-        //mixins.from(file("src/common/main/reintegrated_chipped.mixins.json"))
 
         dependencies {
             fabricApi("0.116.1")
@@ -113,9 +118,9 @@ cloche {
     }
 
     forge("forge:1.20.1") {
+        dependsOn(shared120)
         loaderVersion = "47.4.0"
         minecraftVersion = "1.20.1"
-        //mixins.from(file("src/common/main/reintegrated_chipped.mixins.json"))
 
         dependencies {
             modRuntimeOnly("maven.modrinth:lithostitched:1.4.11-forge-1.20")
@@ -137,18 +142,17 @@ cloche {
                     version("1.4.11")
                 }
             }
-
-            modLoader = "lowcodefml"
         }
     }
 
     neoforge("neoforge:1.21.1") {
+        dependsOn(shared121)
         loaderVersion = "21.1.192"
         minecraftVersion = "1.21.1"
-        //mixins.from(file("src/common/main/reintegrated_chipped.mixins.json"))
 
         dependencies {
             modRuntimeOnly("maven.modrinth:lithostitched:1.4.11-neoforge-1.21")
+
             modRuntimeOnly("earth.terrarium.chipped:chipped-neoforge-1.21.1:4.0.2")
             modRuntimeOnly("earth.terrarium.athena:athena-neoforge-1.21:4.0.1")
             modRuntimeOnly("com.teamresourceful.resourcefullib:resourcefullib-neoforge-1.21:3.0.12")
